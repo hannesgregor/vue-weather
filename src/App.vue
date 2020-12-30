@@ -28,12 +28,13 @@
 
 <script>
 
+require ('dotenv').config();
 
 export default {
   name: 'app',
   data () {
     return {
-      api_key: 'e3e9802efa9c0ce066f7e948d784e16d',
+      api_key = process.env.api_key,
       url_base: 'https://api.openweathermap.org/data/2.5/',
       query: '',
       weather: {}
